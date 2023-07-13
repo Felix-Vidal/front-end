@@ -1,58 +1,156 @@
 body{
     padding: 0;
     margin: 0;
-    background-color: gray;
+    background-color: #ffffff;
 }
+
 div#top{
     display: grid;
 }
 
-div#h{
+div#header{
     display: grid;
-    grid-template-columns: 25% 75%;
+    grid-template-columns: 1fr;
+    margin: 0;
+}
+nav{
+    margin: 0;
+    padding: 0;
 }
 
-div#g1{
-    background-color: yellow;
+div#visual{
     height: 4em;
+    background-color: rgba(70,130,180);
+    text-align: center;
+    color: #ffffff;
 }
 
-div#g2{
-    background-color: orange;
-    height: 4em;
+div#navegacao{
+    background-color: rgb(21, 87, 142);
+    height: 2em;
+    font-size: 20px;
+    text-align: center;  
+    padding-top: 15px;
 }
-div#g3{
-    background-color: red;
-    width: 100%;
-    height: 4em;
+
+div#navegacao a{
+    text-decoration: none;
+    background-color: white;
+    color: rgba(70,130,180);
+    border: solid white;
+    border-radius: 5px;
+    
     
 }
-div#g4{
-    background-color: brown;
+
+div#entrada{
     width: 100%;
-    height: 30em;
+    margin: 1em 0;
+    display: flex;
+    justify-content: center;
 }
 
-div#f{
+div#entrada input[type="text"] {
+    padding: 10px;
+    width: 28em;
+    border: none;
+    border-radius: 20px;
+    background-color: rgb(70,130,180);
+    font-size: 12px;
+    color: #ffffff;
+}
+
+div#entrada input[type="text"]::placeholder {
+    color: rgba(255, 255, 255, 0.6); /* Define a cor mais clara para o placeholder */ 
+}
+
+div#main{
+    width: 100%;
+}
+
+div#main p {
+    font-size: 20px;
+    color: white;
+    padding: 12px;
+    text-align: center;
+    background-color: rgb(70,130,180);
+    border: #fefefe solid;
+    width: 15em;
+    margin: 0 auto;
+    border-radius: 20px;
+
+}
+
+div#main ul {
+    list-style: none;
+    margin: 20px auto;
+    padding: 1em;
+    max-width: 15em;
+    background-color: rgba(187, 187, 202, 0.433);
+    border-radius: 20px;
+}
+
+div#main li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(70,130,180);
+    color: white;
+    border-radius: 12px;
+    padding: 10px;
+    margin: 5px 0;
+}
+
+div#main a.format {
+    color: #fdf1f1;
+    font-size: 1.5em;
+    text-decoration: none;
+}
+
+div#main button.atualizar {
+    background-color: rgb(16, 190, 48);
+    color: #ffffff;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 8px;
+  }
+  
+div#main .button-container {
+    margin-left: 15px;
+}
+
+div#outros{
     display: grid;
-    grid-template-columns: 33% 34% 33%;
+    grid-template-columns: 100%;
 }
-div#g5{
-    background-color: blue;
-    height: 6em;
+div#texto{
+    background-color: rgba(137, 137, 158, 0.418);
 }
-div#g6{
+
+div#texto p{
+    position: relative;
+    z-index: 2;
+}
+
+div#video{
+    display: none;
     background-color: green;
     height: 6em;
 }
-div#g7{
+div#anuncio{
+    display: none;
     background-color:  rgb(86, 7, 126);width: 100%;
     height: 6em;
 
 }
 
-div#g8{
-    background-color:  rgb(80, 74, 74);width: 100%;
-    height: 6em;
-
-}
+div#footer {
+    position: relative;
+    background-color: rgb(70,130,180);
+    padding: 20px 0;
+    text-align: center;
+    width: 100%;
+    height: 1em;
+    z-index: 1;
+    color: rgb(253, 253, 253);
+  }
