@@ -13,10 +13,6 @@ div#header{
     grid-template-columns: 1fr;
     margin: 0;
 }
-nav{
-    margin: 0;
-    padding: 0;
-}
 
 div#visual{
     height: 4em;
@@ -25,12 +21,18 @@ div#visual{
     color: #ffffff;
 }
 
+nav{
+    margin: 0;
+    padding: 0;
+}
+
+
 div#navegacao{
     background-color: rgb(21, 87, 142);
     height: 2em;
     font-size: 20px;
     text-align: center;  
-    padding-top: 15px;
+    padding-top: 24px;
 }
 
 div#navegacao a{
@@ -122,9 +124,11 @@ div#main .button-container {
 div#outros{
     display: grid;
     grid-template-columns: 100%;
+    gap: 10px;
 }
 div#texto{
     background-color: rgba(137, 137, 158, 0.418);
+    text-align: center;
 }
 
 div#texto p{
@@ -139,18 +143,78 @@ div#video{
 }
 div#anuncio{
     display: none;
-    background-color:  rgb(86, 7, 126);width: 100%;
+    background-color:  rgb(86, 7, 126);
+    width: 100%;
     height: 6em;
-
 }
 
 div#footer {
-    position: relative;
-    background-color: rgb(70,130,180);
+    position: fixed;
+    bottom: 0; 
+    background-color: rgb(70, 130, 180);
     padding: 20px 0;
     text-align: center;
     width: 100%;
-    height: 1em;
+    height: 3em;
     z-index: 1;
     color: rgb(253, 253, 253);
-  }
+}
+
+@media (min-width: 480px) {
+
+    div#header{
+        display: grid;
+        grid-template-columns: 1fr 3fr;
+        margin: 0;
+    }
+
+    div#outros {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+    
+    div#texto {
+        background-color: rgba(137, 137, 158, 0.418);
+        grid-column: 1; 
+    }
+    
+    div#video {
+        display: block;
+        grid-column: 2;
+        grid-row: 1;
+    }
+    
+    div#anuncio {
+        display: block;
+        grid-column: 2;
+        grid-row: 2;
+    }
+}
+
+@media (min-width: 768px) {
+
+    div#header{
+        display: grid;
+        grid-template-columns: 1fr 3fr;
+        margin: 0;
+    }
+
+    div#outros {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+    
+    div#texto {
+        background-color: rgba(137, 137, 158, 0.418);
+    }
+    
+    div#video {
+        grid-column: 2;
+        grid-row: 1;
+    }
+    
+    div#anuncio {
+        grid-column: 3;
+        grid-row: 1;
+    }
+}
